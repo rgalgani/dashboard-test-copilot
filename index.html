@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>UN — Mental Health M&E Dashboard (Somalia) — Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="brand">
+        <img src="assets/un-logo.svg" alt="UN placeholder logo" class="logo" />
+        <div>
+          <h1>Mental Health M&E Dashboard — Somalia (Demo)</h1>
+          <p class="sub">UN Agency — Monitoring & Evaluation | Dummy data</p>
+        </div>
+      </div>
+      <div class="controls">
+        <label>Year:
+          <select id="yearSelect"></select>
+        </label>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="kpis" id="kpiCards"></section>
+
+      <section class="charts">
+        <div class="chart-card">
+          <h3>Beneficiaries Reached — Trend</h3>
+          <canvas id="tsChart"></canvas>
+        </div>
+
+        <div class="chart-card">
+          <h3>Cases by Region</h3>
+          <canvas id="regionsChart"></canvas>
+        </div>
+
+        <div class="chart-card">
+          <h3>Severity Breakdown</h3>
+          <canvas id="severityChart"></canvas>
+        </div>
+
+        <div class="chart-card">
+          <h3>Referrals and Follow-up</h3>
+          <canvas id="referralsChart"></canvas>
+        </div>
+      </section>
+
+      <section class="map-table">
+        <div class="map-card">
+          <h3>Service Coverage Map (dummy locations)</h3>
+          <div id="map" style="height:360px"></div>
+        </div>
+
+        <div class="table-card">
+          <h3>Recent Activities (sample)</h3>
+          <table id="activityTable">
+            <thead>
+              <tr><th>Date</th><th>Region</th><th>Activity</th><th>Count</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>Demo project — dummy data only. For use by UN M&E teams to prototype visualizations.</p>
+      </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="data.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>
